@@ -1,4 +1,6 @@
 import * as React from 'react';
+import history from '../history';
+import {  Link } from "react-router-dom"
 import memberprice from '../img/memberprice.jpg'
 // proudct  产品信息   
 export interface Props{
@@ -9,8 +11,9 @@ class ProductLayout extends React.Component<Props,{}>{
 	render(){
 		const {product} = this.props;
 		return (
-			<div className="productconation" key={product.id}>
-				<div className="productbox pre cursor">
+			<div className="productconation" key={product.id} >
+				<Link to={'/productDetail/'+product.id} target="_blank"rel="noopener noreferrer">
+				<div className="productbox pre cursor" >
 					<div className="pimg">
 						<img src={getProductImg(product.logoImg)} alt="" />
 					</div>
@@ -26,6 +29,7 @@ class ProductLayout extends React.Component<Props,{}>{
 						<button className="button" type="button" >加入购物车</button>
 					</div>
 				</div>
+				</Link>
 			</div>
 		)
 

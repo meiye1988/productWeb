@@ -31,6 +31,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home';
 import Search from './pages/search';
+import ProductDetail from './pages/productDetail';
 import PubSub from 'pubsub-js'
 import './css/reset.css';
 import './css/common.css';
@@ -48,6 +49,7 @@ class App extends React.Component<{},{}>{
 			<Route path="/" exact={true} component={Home} />{/* 为了避免home组件一直渲染，我们可以添加属性exact */}
 			<Route path="/home"  component={Home} />
 			<Route path="/search/:name" component={Search} />
+			<Route path="/productDetail/:id" component={ProductDetail} />
 			</Switch>
 			<Footer  />
 		</Router>
