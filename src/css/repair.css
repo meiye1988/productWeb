@@ -1,0 +1,210 @@
+.repairBox .repairList table {
+  font-size: 0.14rem;
+  color: #222222; }
+.repairBox .repairList table tr {
+  height: 40px;
+  line-height: 40px; }
+  .repairBox .repairList table tr td, .repairBox .repairList table tr th {
+    text-align: left; }
+  .repairBox .repairList table tr td:first-child, .repairBox .repairList table tr th:first-child {
+    padding-left: 10px; }
+.repairBox .repairList thead tr {
+  background: #F2F2F2;
+  font-weight: bold; }
+.repairBox .repairList tbody tr:nth-child(even) {
+  background: #F2F2F2;
+  border-top: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9; }
+.repairBox .repairList tbody td {
+  color: #595959; }
+.repairBox .repairList tbody .button {
+  font-size: 0.14rem; }
+
+.submitRepairBox {
+  margin-top: 20px;
+  padding-bottom: 10px; }
+  .submitRepairBox .title {
+    font-size: 0.22rem;
+    padding: 15px 0;
+    color: #333333; }
+  .submitRepairBox .submitContent {
+    padding: 20px 20px 30px 20px;
+    margin-bottom: 20px; }
+    .submitRepairBox .submitContent .atitle {
+      font-size: 0.2rem;
+      padding-bottom: 15px;
+      color: #262626; }
+    .submitRepairBox .submitContent .addressinfo {
+      padding-bottom: 15px; }
+      .submitRepairBox .submitContent .addressinfo > span {
+        display: inline-block; }
+        .submitRepairBox .submitContent .addressinfo > span:nth-child(4) {
+          color: #B4B4B4;
+          margin-left: 50px; }
+    .submitRepairBox .submitContent .addAddressbtn {
+      position: absolute;
+      font-size: 0.16rem;
+      padding: 10px 25px;
+      right: 0;
+      top: 10px; }
+    .submitRepairBox .submitContent textarea {
+      width: 100%;
+      background: #F5F5F5;
+      padding: 15px;
+      border: 0;
+      margin-bottom: 15px;
+      outline: none;
+      font-size: 0.16rem; }
+      .submitRepairBox .submitContent textarea.content {
+        height: 400px; }
+      .submitRepairBox .submitContent textarea.remark {
+        height: 100px; }
+    .submitRepairBox .submitContent .assbox {
+      background: #F5F5F5;
+      padding: 15px; }
+      .submitRepairBox .submitContent .assbox > span {
+        display: inline-block;
+        padding-right: 20px; }
+  .submitRepairBox .bottomsubmitbox {
+    font-size: 0;
+    margin-top: 40px; }
+    .submitRepairBox .bottomsubmitbox > span {
+      display: inline-block;
+      font-size: 0.2rem; }
+      .submitRepairBox .bottomsubmitbox > span.payprice {
+        font-size: 0.3rem;
+        position: absolute;
+        bottom: -3px;
+        left: 60px; }
+    .submitRepairBox .bottomsubmitbox .plipaybtn {
+      position: absolute;
+      font-size: .2rem;
+      font-weight: bold;
+      padding: 15px 80px;
+      right: 0;
+      top: -20px; }
+
+.submitRepairBox .namebox {
+  padding: 8px 0;
+  border: 2px solid #595959;
+  width: 120px;
+  text-align: center;
+  color: #595959;
+  font-size: 0.2rem; }
+  .submitRepairBox .namebox:hover {
+    border: 2px solid #FF7E00; }
+.submitRepairBox .namebox.active {
+  border: 2px solid #FF7E00;
+  color: #FF7E00; }
+.submitRepairBox .namedetailbox {
+  flex: 1;
+  color: #595959;
+  font-size: 0.16rem; }
+  .submitRepairBox .namedetailbox > span {
+    margin-right: 10px; }
+  .submitRepairBox .namedetailbox .opertion {
+    margin-left: 10px; }
+.submitRepairBox .moreaddress {
+  padding: 5px 0;
+  color: #595959;
+  font-size: 0.16rem; }
+.submitRepairBox .rit {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+.submitRepairBox .namedetailbox {
+  padding-left: 70px;
+  padding-top: 14px; }
+.submitRepairBox .daodianbox .daotitle {
+  font-weight: bold;
+  padding: 10px 0;
+  color: #262626;
+  font-size: 0.2rem; }
+.submitRepairBox .addressmainbox:hover .opertionbox {
+  display: block !important; }
+.submitRepairBox .addressmainbox:hover .namedetailbox {
+  background: rgba(248, 234, 214, 0.5); }
+.submitRepairBox .probox, .submitRepairBox .payt {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 15px 0;
+  font-size: 0.2rem;
+  font-weight: bold; }
+.submitRepairBox .payt {
+  border-bottom: 0; }
+.submitRepairBox .payshade {
+  background: #F5F5F5;
+  display: inline-block;
+  margin-right: 20px;
+  border: 1px solid white; }
+  .submitRepairBox .payshade.active {
+    border: 1px solid #FF7E00; }
+
+.spancolor {
+  color: #595959; }
+
+.repairDetailBox .ttle {
+  font-size: 0.2rem;
+  color: #262626;
+  margin-bottom: 15px; }
+.repairDetailBox .ttc {
+  color: #595959;
+  margin-bottom: 25px;
+  font-size: 0.16rem; }
+  .repairDetailBox .ttc > span {
+    display: inline-block;
+    margin-right: 15px; }
+.repairDetailBox .price {
+  font-size: 0.3rem; }
+.repairDetailBox textarea {
+  width: 100%;
+  background: #F5F5F5;
+  padding: 15px;
+  border: 0;
+  margin-bottom: 15px;
+  font-size: 0.16rem;
+  height: 80px;
+  outline: none; }
+.repairDetailBox .commitbtn {
+  font-weight: bold;
+  padding: 10px 60px;
+  font-size: 0.2rem; }
+
+.arrd.arrow {
+  transform: rotate(-180deg); }
+
+.addAddressbox {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #FF7E00;
+  font-size: 0.18rem; }
+
+.opertionbox {
+  float: right; }
+
+.payshade {
+  background: #F5F5F5;
+  display: inline-block;
+  margin-right: 20px;
+  border: 1px solid white; }
+  .payshade.active {
+    border: 1px solid #FF7E00; }
+
+.submitRepairBox .uploadbox, .repairDetailBox .uploadbox {
+  margin-left: auto;
+  margin-right: auto; }
+  .submitRepairBox .uploadbox .upbox, .repairDetailBox .uploadbox .upbox {
+    width: auto;
+    text-align: center;
+    vertical-align: top;
+    margin-right: 0.15rem; }
+    .submitRepairBox .uploadbox .upbox .closeimg, .repairDetailBox .uploadbox .upbox .closeimg {
+      right: -7px; }
+  .submitRepairBox .uploadbox .upbox img, .repairDetailBox .uploadbox .upbox img {
+    width: 1.5rem;
+    height: 1.5rem; }
+.submitRepairBox .uploader__input-box, .repairDetailBox .uploader__input-box {
+  width: 1.5rem;
+  height: 1.5rem; }
+
+/*# sourceMappingURL=repair.css.map */

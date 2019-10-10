@@ -1,0 +1,71 @@
+.inputbox {
+  margin-bottom: 0.19rem; }
+  .inputbox input {
+    border: 1px solid #E0E0E0;
+    padding: 10px 0 10px 30px;
+    width: 100%;
+    outline: none;
+    font-size: 0.14rem;
+    height: 0.48rem; }
+
+.phoneimg {
+  position: absolute;
+  left: 12px;
+  width: 10px;
+  top: 50%;
+  transform: translateY(-50%); }
+  @media screen and (min-width: 1600px) {
+    .phoneimg {
+      width: 13px; } }
+
+.codeimg {
+  position: absolute;
+  left: 7px;
+  width: 17px;
+  top: 50%;
+  transform: translateY(-50%); }
+  @media screen and (min-width: 1600px) {
+    .codeimg {
+      width: 20px; } }
+
+.registerfrom {
+  position: absolute;
+  top: 25%;
+  width: 300px;
+  right: 200px;
+  padding: 0.4rem 0.35rem;
+  border-radius: 8px; }
+  .registerfrom .title {
+    text-align: center;
+    font-size: 0.3rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #595959; }
+  @media screen and (min-width: 1600px) {
+    .registerfrom {
+      width: 420px;
+      right: 300px; } }
+
+.getcode {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 0.14rem; }
+  .getcode a {
+    color: #0288D1; }
+  .getcode span {
+    color: #999; }
+  .getcode a:hover {
+    color: #FF7E00; }
+
+.inputbox {
+  font-size: 0; }
+
+.loginbtn {
+  width: 100%;
+  font-size: 0.2rem;
+  padding: 10px 0;
+  font-size: 0.18rem; }
+
+/*# sourceMappingURL=register.css.map */

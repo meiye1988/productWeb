@@ -1,0 +1,18 @@
+{
+		
+"defaultSeverity": "none", //关闭tslint
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "rules": {
+	"member-access": false,// 设置成员对象的访问权限（public,private,protect) false 不需要
+	"ordered-imports": false,//import名称排序问题，要求按照字母从小到大排序  false 不需要
+	"interface-name" : [true, "never-prefix"],//不需要严格执行接口名称必须以大写的I开头
+	"comment-format": [false,"check-space"]//不需要严格执行在注释//之后加一个空格
+  }
+}

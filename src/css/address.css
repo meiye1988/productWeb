@@ -1,0 +1,85 @@
+.addressBox .list .scontent, .addressBox .list .editbox {
+  font-size: 12px; }
+
+.addressBox .list .stitle {
+  font-size: 18px; }
+
+.addressBox {
+  color: #575757; }
+  .addressBox .contentBox {
+    padding: 40px 20px; }
+  .addressBox .list {
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex; }
+    .addressBox .list > div {
+      flex: 1; }
+    .addressBox .list .info {
+      padding: 0 8px;
+      width: 20%; }
+      .addressBox .list .info .add {
+        height: 100%; }
+      .addressBox .list .info .addbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .addressBox .list .infos {
+      border: 1px solid #E1E1E1;
+      padding: 15px; }
+    .addressBox .list .stitle {
+      margin-bottom: 20px; }
+    .addressBox .list .scontent > div {
+      margin-bottom: 5px; }
+    .addressBox .list .editbox > span {
+      display: inline-block;
+      padding: 0 10px;
+      color: #3172F1; }
+      .addressBox .list .editbox > span:first-child {
+        border-right: 1px solid #3172F1; }
+      .addressBox .list .editbox > span:last-child {
+        padding-right: 0; }
+
+.addinfobox {
+  padding: 20px; }
+  .addinfobox input {
+    width: 205px;
+    border: 1px solid #EAEAEA;
+    height: 0.4rem;
+    padding-left: 5px;
+    font-size: 0.14rem;
+    color: #999999; }
+    .addinfobox input:first-child {
+      margin-right: 10px; }
+  .addinfobox select {
+    width: 133px;
+    height: 0.4rem;
+    border: 1px solid #EAEAEA;
+    font-size: 0.14rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    color: #999999; }
+    .addinfobox select:last-child {
+      margin-right: 0px; }
+
+.addressFrame .addbtn {
+  font-size: 0;
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 0;
+  background: #F2F2F2; }
+  .addressFrame .addbtn > button {
+    padding: 5px 50px;
+    font-size: 0.16rem;
+    margin-right: 10px; }
+    .addressFrame .addbtn > button.button2 {
+      border: 1px solid #A0A0A0;
+      background: #A0A0A0;
+      color: white; }
+
+.addressFrame .layui-layer-setwin a {
+  width: 10px;
+  height: 10px; }
+
+/*# sourceMappingURL=address.css.map */

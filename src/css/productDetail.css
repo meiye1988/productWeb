@@ -1,0 +1,159 @@
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.productDetailBox .catoly {
+  font-size: 0.14rem;
+  color: #262626; }
+.productDetailBox .toptitle {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto; }
+.productDetailBox .primgblx {
+  border: 1px solid #D9D9D9;
+  background: #F2F2F2;
+  padding: 20px;
+  width: 33%; }
+.productDetailBox .prmeterbox {
+  flex: 1;
+  width: 66%;
+  padding-top: 20px;
+  padding-left: 40px; }
+  .productDetailBox .prmeterbox .metetitle {
+    font-size: 0.30rem;
+    margin-bottom: 20px;
+    line-height: 0.4rem; }
+.productDetailBox .prmeters {
+  color: #BCBCBC;
+  font-size: 0.14rem; }
+  .productDetailBox .prmeters > div:last-child {
+    font-size: 0.18rem;
+    color: black; }
+  .productDetailBox .prmeters > div > span {
+    display: inline-block;
+    margin-bottom: 10px; }
+    .productDetailBox .prmeters > div > span:first-child {
+      width: 100px; }
+.productDetailBox .priceBox {
+  font-size: 0.2rem; }
+  .productDetailBox .priceBox > div:first-child {
+    margin: 40px 0 10px 0; }
+  .productDetailBox .priceBox .memberprice {
+    font-size: 0.25rem; }
+.productDetailBox .pbtnBox .pronumberBox {
+  position: absolute;
+  bottom: 0;
+  left: 40px; }
+.productDetailBox .pbtnBox .opbtn {
+  display: inline-block;
+  border: 1px solid #D9D9D9;
+  background: #F2F2F2;
+  padding: 0 11px;
+  color: #4D4D4D;
+  font-size: 0.18rem;
+  height: 0.45rem;
+  line-height: 0.43rem; }
+.productDetailBox .pbtnBox input {
+  width: 60px;
+  text-align: center;
+  height: 0.45rem;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  border-color: #D9D9D9;
+  font-size: 0.2rem; }
+.productDetailBox .pbtnBox .btnBox {
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .productDetailBox .pbtnBox .btnBox > div {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.2rem;
+    font-weight: bold;
+    margin-left: 10px; }
+.productDetailBox .pbtnBox .favBtn {
+  padding: 13px 15px 12px 15px; }
+  .productDetailBox .pbtnBox .favBtn img {
+    width: 18px;
+    margin-right: 10px; }
+.productDetailBox .pbtnBox .joincartBtn {
+  padding: 13px 30px; }
+.productDetailBox .pbtnBox .copyBtn {
+  padding: 13px 90px;
+  border: 2px solid #FF7E00; }
+  .productDetailBox .pbtnBox .copyBtn:hover {
+    border: 2px solid #eb7400; }
+.productDetailBox .pbtnBox .favBtn, .productDetailBox .pbtnBox .joincartBtn {
+  border: 2px solid #FF7E00;
+  color: #FF7E00; }
+.productDetailBox .primgswiper {
+  width: 33%; }
+  .productDetailBox .primgswiper .item {
+    padding: 5px;
+    background: #F2F2F2;
+    border: 1.5px solid #F2F2F2;
+    display: block; }
+    .productDetailBox .primgswiper .item.active {
+      border: 1.5px solid #FF7E00; }
+
+.swiper.swiper2 .owl-dots {
+  display: none; }
+.swiper.swiper2 .owl-nav {
+  z-index: -1; }
+.swiper.swiper2 .owl-nav button span:after {
+  border-color: black;
+  left: 10px;
+  height: 10px;
+  width: 10px;
+  /* top:5px; */ }
+.swiper.swiper2 .owl-theme .owl-nav {
+  margin-top: 0; }
+.swiper.swiper2 .owl-theme .owl-nav [class*=owl-] {
+  margin: 0; }
+.swiper.swiper2 .owl-nav button:first-child {
+  float: left;
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%); }
+.swiper.swiper2 .owl-nav button span:hover {
+  background: white; }
+.swiper.swiper2 .owl-nav button:hover {
+  background: white; }
+.swiper.swiper2 .owl-nav button:last-child {
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translateY(-50%); }
+.swiper.swiper2 .owl-nav button:last-child span:after {
+  left: 0; }
+
+.prodetailcontentbox .title {
+  font-size: 0.2rem;
+  color: #262626;
+  padding: 15px 0; }
+.prodetailcontentbox .content {
+  font-size: 0.14rem;
+  color: #595959; }
+
+/*# sourceMappingURL=productDetail.css.map */

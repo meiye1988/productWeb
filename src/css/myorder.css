@@ -1,0 +1,129 @@
+.orderlistbox {
+  padding: 0.3rem; }
+  .orderlistbox .tabbox {
+    font-size: 0.16rem; }
+    .orderlistbox .tabbox > span {
+      display: inline-block;
+      border-right: 1px solid #444444;
+      padding: 0 10px;
+      color: #444444; }
+      .orderlistbox .tabbox > span.active {
+        color: #FF7E00; }
+      .orderlistbox .tabbox > span:hover {
+        color: #FF7E00; }
+      .orderlistbox .tabbox > span:last-child {
+        border-right: 0; }
+      .orderlistbox .tabbox > span:first-child {
+        padding-left: 0; }
+  .orderlistbox .searchbox {
+    position: absolute;
+    font-size: 0;
+    right: 0;
+    top: -0.17rem; }
+    .orderlistbox .searchbox input {
+      border: 1px solid #BEBEBE;
+      height: 0.4rem;
+      border-right: 0;
+      width: 300px;
+      padding-left: 10px;
+      font-size: 0.14rem; }
+    .orderlistbox .searchbox .sicon {
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      border: 1px solid #BEBEBE;
+      vertical-align: top;
+      text-align: center;
+      line-height: 0.35rem; }
+  .orderlistbox .orderlistc {
+    background: #F2F2F2;
+    padding: 13px 20px; }
+    .orderlistbox .orderlistc:first-child {
+      margin-top: 0.28rem; }
+    .orderlistbox .orderlistc .itbox {
+      font-size: 0.14rem; }
+    .orderlistbox .orderlistc .createTime {
+      color: #999999; }
+  .orderlistbox .pdetailbox {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center; }
+    .orderlistbox .pdetailbox .img {
+      width: 80px;
+      height: 80px;
+      background: #F2F2F2;
+      padding: 15px 5px; }
+    .orderlistbox .pdetailbox .protitle {
+      width: 500px;
+      font-size: 0.14rem;
+      line-height: 0.2rem;
+      font-weight: bold;
+      color: #262626;
+      margin-right: 15px; }
+    .orderlistbox .pdetailbox .propn {
+      width: 120px;
+      font-size: 0.14rem;
+      font-weight: bold;
+      color: #262626; }
+    .orderlistbox .pdetailbox .propr {
+      font-size: 0.16rem; }
+  .orderlistbox .psbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 0.16rem; }
+    .orderlistbox .psbtn > button {
+      display: block;
+      padding: 7px 30px;
+      margin-bottom: 10px; }
+      .orderlistbox .psbtn > button.button2 {
+        border: 1px solid #B0B0B0;
+        color: #999999; }
+  .orderlistbox .borderbottom {
+    border-bottom: 1px solid #EEEEEE; }
+  .orderlistbox .orderdt {
+    padding-bottom: 0.19rem; }
+    .orderlistbox .orderdt .ordercode {
+      font-size: 0.3rem;
+      color: #595959; }
+    .orderlistbox .orderdt .status {
+      display: inline-block;
+      margin-left: 25px;
+      vertical-align: middle;
+      margin-top: -10px;
+      font-size: 0.2rem; }
+  .orderlistbox .takeinfo .title {
+    font-size: 0.2rem;
+    color: #262626; }
+  .orderlistbox .takeinfo .dinfo > div {
+    font-size: 0.14rem;
+    margin-bottom: 15px;
+    color: #595959; }
+    .orderlistbox .takeinfo .dinfo > div > span {
+      display: inline-block;
+      margin-left: 80px;
+      color: #262626;
+      font-weight: bold; }
+  .orderlistbox .pricedetail > div {
+    margin-bottom: 10px;
+    font-size: 0.14rem;
+    color: #595959; }
+  .orderlistbox .pdtext {
+    position: absolute;
+    color: #838383;
+    right: 150px; }
+  .orderlistbox .yingfu {
+    font-size: 0.28rem; }
+
+.myorderdetailbox .psbtn > button {
+  display: inline-block; }
+.myorderdetailbox .paybtn {
+  font-size: 0.2rem;
+  padding: 5px 60px; }
+
+.ocolor {
+  color: #A7A7A7; }
+
+/*# sourceMappingURL=myorder.css.map */

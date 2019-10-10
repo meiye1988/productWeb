@@ -1,0 +1,37 @@
+.productTabBox > div {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #DBDBDB;
+  border-right: 0;
+  background: white;
+  color: black;
+  font-size: 0.14rem;
+  padding: 5px 10px; }
+  .productTabBox > div:last-child {
+    border-right: 1px solid #DBDBDB; }
+  .productTabBox > div.active {
+    background: #FF7E00;
+    color: white; }
+
+.categorySelectBox {
+  padding: 10px 0; }
+
+.brandlist {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.bransbox {
+  display: inline-block;
+  width: 16.6%;
+  vertical-align: top;
+  padding-right: 5px;
+  margin-bottom: 5px; }
+  .bransbox .brans {
+    background: white;
+    height: 1.2rem;
+    padding: 0.05rem 0.06rem; }
+    .bransbox .brans img {
+      height: 1.1rem;
+      vertical-align: top; }
+
+/*# sourceMappingURL=category.css.map */

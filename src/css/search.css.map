@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,YAAY;EACX,OAAO,EAAC,aAAa;EACrB,SAAS,EAAC,IAAI",
+"sources": ["../sass/search.scss"],
+"names": [],
+"file": "search.css"
+}

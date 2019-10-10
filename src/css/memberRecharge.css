@@ -1,0 +1,43 @@
+body, html {
+  background: #f5f5f5; }
+
+.flex {
+  align-items: center; }
+
+.memberRechargeBox .text {
+  width: 20%;
+  text-align: center; }
+  .memberRechargeBox .text .ch {
+    font-weight: bold;
+    font-size: 0.24rem;
+    margin-bottom: 5px; }
+  .memberRechargeBox .text .en {
+    font-size: 0.16rem; }
+.memberRechargeBox .content {
+  flex: 1;
+  padding-right: 60px; }
+.memberRechargeBox .intro {
+  font-size: 0.14rem;
+  line-height: 22px;
+  color: #595959; }
+.memberRechargeBox .priceb {
+  padding: 30px 0;
+  font-size: 0.2rem; }
+.memberRechargeBox .price {
+  font-size: 0.2rem; }
+
+.mbtn .button {
+  font-size: 0.2rem;
+  padding: 5px 60px;
+  margin-bottom: 40px; }
+
+.payshade {
+  background: #F5F5F5;
+  display: inline-block;
+  margin-right: 20px;
+  border: 1px solid white;
+  margin-bottom: 20px; }
+  .payshade.active {
+    border: 1px solid #FF7E00; }
+
+/*# sourceMappingURL=memberRecharge.css.map */

@@ -1,0 +1,70 @@
+.diybox {
+  background: url(../img/diybk-min.jpg);
+  background-size: 100% 100%;
+  padding: 20px;
+  margin-left: -5px;
+  margin-right: -5px; }
+  .diybox .diyboxrow {
+    padding: 20px;
+    background: #FF7E00; }
+  .diybox .diyimg {
+    width: 52px;
+    height: 52px;
+    margin: auto;
+    line-height: 42px; }
+  .diybox .diyrow {
+    display: inline-block;
+    width: 14.2%;
+    padding: 0 10px;
+    margin-bottom: 15px; }
+  .diybox .protypebox {
+    color: white;
+    text-align: center; }
+    .diybox .protypebox .diyname {
+      margin: 4px 0 8px 0;
+      font-size: 0.2rem; }
+    .diybox .protypebox select {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0px;
+      border: 0;
+      outline: none;
+      background-color: white;
+      padding-left: 25px;
+      background: white url("../img/diy_select.jpg") no-repeat;
+      background-position: center right 20px;
+      font-size: 0.14rem;
+      color: #262626; }
+
+.linehot {
+  margin-top: 20px; }
+
+.layui-form-select dl dd, .layui-form-select .layui-input {
+  color: #262626;
+  font-size: 0.13rem; }
+
+.layui-form-select .layui-input {
+  text-align: center;
+  color: #262626; }
+
+.layui-form-select dl {
+  padding: 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+
+.layui-form-select dl dd {
+  padding-left: 10px;
+  padding-right: 30px;
+  text-align: center; }
+  .layui-form-select dl dd.layui-this, .layui-form-select dl dd.layui-select-tips {
+    background-color: white;
+    color: #262626; }
+  .layui-form-select dl dd:hover {
+    background-color: white;
+    color: #FF7E00; }
+
+.layui-form-select .layui-edge {
+  border-top-color: #FF7E00; }
+
+/*# sourceMappingURL=DIY.css.map */
