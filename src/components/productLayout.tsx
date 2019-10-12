@@ -1,5 +1,4 @@
 import * as React from 'react';
-import history from '../history';
 import {  Link } from "react-router-dom"
 import memberprice from '../img/memberprice.jpg'
 // proudct  产品信息   

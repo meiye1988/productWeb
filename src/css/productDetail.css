@@ -70,7 +70,11 @@
   color: #4D4D4D;
   font-size: 0.18rem;
   height: 0.45rem;
-  line-height: 0.43rem; }
+  line-height: 0.43rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 .productDetailBox .pbtnBox input {
   width: 60px;
   text-align: center;

@@ -5,6 +5,7 @@ import {  Link } from "react-router-dom"
 import history from '../history';
 import {observer} from "mobx-react"
 import {observable} from "mobx"
+// import Swiper from './swiper'
 
 import iconpin from '../img/iconpin.png'
 import iconshipy from '../img/iconshipy.png'
@@ -12,18 +13,26 @@ import logo from '../img/logo.png'
 import iconseach from '../img/iconseach.png'
 import iconfk from '../img/iconfk.png'
 
+export interface Props{
+	isIndexPage:boolean,
+	handleSearchWordValue:any
+}
 
 @observer
-class Header extends React.Component<{handleSearchWordValue:any},{hotSearchList:any[],producttypelist:any[],showIndex:number,searchWord:string,redirect:boolean}>{
+class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:any[],showIndex:number,searchWord:string,redirect:boolean}>{
 	@observable searchWord:any;
-	constructor(props:any){
+	@observable is_indexPage:boolean;
+	@observable categoryHeight:number;
+	constructor(props:Props){
 		super(props);
 		this.state = {hotSearchList:[],producttypelist:[],showIndex:-1,searchWord:'',redirect:false};
 		this.clickHotSearch = this.clickHotSearch.bind(this);
 		this.searchWord = "";
+		
 	}
 	componentWillMount() {
 		
+		console.log(this.props.isIndexPage);
 		this.fetchHotLabelData();
 		this.fetchCategoryData();
 	  }
@@ -158,8 +167,8 @@ class Header extends React.Component<{handleSearchWordValue:any},{hotSearchList:
 				<div className="w100 headernav  fontsize0">
 					<div className="container clearfix">
 						<div className="allcategory fl cursor pre">
-							<img src={iconfk} className="auto" />全部分类
-							<div className="categoryallbox w100 noindex fontsize0">
+							<img src={iconfk} className="auto allcimg" />全部分类
+							<div className={!this.props.isIndexPage?'categoryallbox w100 noindex fontsize0':'none'}>
 								<div className="cbox inline-block " style={{width:'85%'}} id="navbottombox">
 									{
 										producttypelist.map((item:any,key:number)=>{
@@ -189,7 +198,7 @@ class Header extends React.Component<{handleSearchWordValue:any},{hotSearchList:
 									</div>
 								</div>
 						</div>
-						<div className="nav fl ">
+						<div className="nav fl "> 
 							<div className="navbox">
 								<span><Link to="/home">首页</Link></span>
 								<span><a href="javascript:void(0)">DIY</a></span>
@@ -200,6 +209,8 @@ class Header extends React.Component<{handleSearchWordValue:any},{hotSearchList:
 						</div>
 					</div>
 				</div>
+				
+						
 			</div>
 		);
 	}
