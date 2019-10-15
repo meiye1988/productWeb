@@ -48,9 +48,9 @@ class Swiper extends React.Component<Props,{}>{
 		const {clientWidth} = this.refDom;
 		this.itemWidth = clientWidth;
 		this.animateStyle = {
-			transform: 'translate3d(0px, 0px, 0px)',
+			transform: 'translate3d(-'+(this.itemWidth)+'px, 0px, 0px)',
 			transition: 'all 0.25s ease 0s',
-			width:this.itemWidth * 3 +'px'
+			width:this.itemWidth * 5 +'px'
 		}
 		this.itemStyle = {
 			width:this.itemWidth +'px',
@@ -93,14 +93,32 @@ class Swiper extends React.Component<Props,{}>{
 		}, this.time);
 	}
 	go(index:number){
-		if(index > this.itemLength){
-			this.currentIndex = index = 1;
-			
-		}else if(index <= 0){
-			this.currentIndex = index = this.itemLength;
-		}
-		let lefts = (index-1)*this.itemWidth;
+		let lefts = (index)*this.itemWidth;
 		this.animateStyle.transform = 'translate3d(-'+lefts+'px, 0px, 0px)';
+		if(this.currentIndex >= (this.itemLength+1)){
+			console.log("从第3张滑动到第一张的附属图");
+			this.currentIndex = 1;
+			setTimeout(()=>{
+				this.animateStyle.transition = "";
+				this.animateStyle.transform = 'translate3d(-'+this.itemWidth+'px, 0px, 0px)';
+				setTimeout(()=>{
+					this.animateStyle.transition = "all 0.25s ease 0s";
+				},200);
+			},200);
+			
+			
+		}else if(this.currentIndex <= 0){
+			console.log("从第1张滑动到最后一张的附属图");
+			this.currentIndex = 3;
+			setTimeout(()=>{
+				this.animateStyle.transition = "";
+				let lefts = (this.itemLength)*this.itemWidth;
+				this.animateStyle.transform = 'translate3d(-'+lefts+'px, 0px, 0px)';
+				setTimeout(()=>{
+					this.animateStyle.transition = "all 0.25s ease 0s";
+				},200);
+			},200);
+		}
 	}
 	render(){
 		let str = [];
@@ -111,15 +129,21 @@ class Swiper extends React.Component<Props,{}>{
 			<div className="swiper pre" ref={this.saveRef}>
 				<div className="owl-stage-outer" style={toJS(this.animateStyle)}>
 					<div className="owl-stage">
+					<div className="swiper-item" key={'-1'} style={this.itemStyle}>
+							<img src={this.props.items[this.itemLength-1].imgurl} style={this.imgStyle} />
+						</div>
 						{
 							this.props.items.map((item:any,key:any)=>{
 								return (
-									<div className="swiper-item" key={item.id} style={this.itemStyle}>
+									<div className="swiper-item" key={key} style={this.itemStyle}>
 										<img src={item.imgurl} style={this.imgStyle} />
 									</div>
 								)
 							})
 						}
+						<div className="swiper-item" key={4} style={this.itemStyle}>
+							<img src={this.props.items[0].imgurl} style={this.imgStyle} />
+						</div>
 					</div>
 				</div>
 				<div className="owl-nav">
