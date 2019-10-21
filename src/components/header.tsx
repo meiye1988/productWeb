@@ -3,30 +3,34 @@ import {fixTokenPost} from '../lib/http'
 import {isBlank} from '../lib/util'
 import {  Link } from "react-router-dom"
 import history from '../history';
-import {observer} from "mobx-react"
+import { observer, inject } from "mobx-react"
 import {observable} from "mobx"
-// import Swiper from './swiper'
-
 import iconpin from '../img/iconpin.png'
 import iconshipy from '../img/iconshipy.png'
 import logo from '../img/logo.png'
 import iconseach from '../img/iconseach.png'
 import iconfk from '../img/iconfk.png'
+import { IAccountStore } from "../store/accountStore";
 
 export interface Props{
 	isIndexPage:boolean,
-	handleSearchWordValue:any
+	isShowHeader:boolean,
+	handleSearchWordValue:any,
+	accountStore?: IAccountStore | null,
 }
-
+@inject('accountStore')
 @observer
 class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:any[],showIndex:number,searchWord:string,redirect:boolean}>{
 	@observable searchWord:any;
 	@observable is_indexPage:boolean;
+	@observable is_showHeader:boolean;
 	@observable categoryHeight:number;
+	@observable isLogin:boolean;
 	constructor(props:Props){
 		super(props);
 		this.state = {hotSearchList:[],producttypelist:[],showIndex:-1,searchWord:'',redirect:false};
 		this.clickHotSearch = this.clickHotSearch.bind(this);
+		this.loginout = this.loginout.bind(this);
 		this.searchWord = "";
 		
 	}
@@ -35,8 +39,11 @@ class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:
 		console.log(this.props.isIndexPage);
 		this.fetchHotLabelData();
 		this.fetchCategoryData();
+		this.isLogin = this.props.accountStore!.isLogin();
+		
 	  }
 	  fetchHotLabelData(){
+		  
 		fixTokenPost('hotlabel/list',{}).then((res:any) => {
 			let list:any[] = res.object;
 			let rom:number = Math.floor((Math.random()*res.object.length)+1);
@@ -77,6 +84,7 @@ class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:
 		return result;
 	  }
 	  ToggleShow(index:number){
+	
 		if(this.state.showIndex > -1){
 			this.setState({showIndex:-1})
 		}else{
@@ -99,6 +107,7 @@ class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:
 		}
 	  }
 	  clickHotSearch(event:any){
+		
 		const searchWord  = event.target.getAttribute('data-searchword');
 		if(!isBlank(searchWord)){
 			this.searchWord = searchWord;
@@ -111,11 +120,20 @@ class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:
 		
 	  
 	  }
+	  loginout(){
+		this.props.accountStore!.clear();
+		history.replace('/login');
+	  }
 	render() {
 		const {hotSearchList,producttypelist,showIndex} = this.state;
-		
+		let userMessage;
+		if(this.isLogin){
+			userMessage = (<span><span className="gcolor cursor">{this.props.accountStore!.get()},您好</span><span className="cursor hovercolor" onClick={this.loginout}>退出</span></span>)							
+		}else{
+			userMessage = (<span className="gcolor cursor" >账户登录</span>)		
+		}
 		return (
-			<div>
+			<div className={this.props.isShowHeader?'':'none'}>
 				<div className="w100 topnavbox">
 					<div className="container clearfix pre">
 						<div className="topheader fl">
@@ -123,14 +141,15 @@ class Header extends React.Component<Props,{hotSearchList:any[],producttypelist:
 								<img src={iconpin} className="auto" />	
 							</span>
 							<span><span id="cityname">在定位中</span>&nbsp;<span id="areaname"></span></span>
-							<span className="gcolor cursor"  v-show="!common.isUser">账户登录</span>
-							<span className="gcolor cursor" v-show="common.isUser">123123,您好</span>
-							<span className="cursor hovercolor" v-show="common.isUser" >退出</span>
+							{userMessage}
+							{/* <span className="gcolor cursor" >账户登录</span>
+							<span className="gcolor cursor">123123,您好</span>
+							<span className="cursor hovercolor" >退出</span> */}
 						</div>
 						<div className="rightnav">
 							<span><img src={iconshipy} className="auto" /></span>
-							<span><a href="javascript:void(0)" >购物车</a></span>
-							<span><a href="javascript:void(0)"  >我的收藏</a></span>
+							<span><Link to='/cart'>购物车</Link></span>
+							<span><Link to='/fav'>我的收藏</Link></span>
 							<span><a href="javascript:void(0)" >我的订单</a></span>
 							<span><a href="javascript:void(0)" ><span >会员</span></a></span>
 							<span><a href="javascript:void(0)">关于修修狐</a></span>
