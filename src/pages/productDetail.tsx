@@ -3,7 +3,7 @@ import * as React from 'react';
 import {fixTokenPost} from '../lib/http'
 import {observer} from "mobx-react"
 import {observable} from "mobx"
-import {RouteComponentProps } from 'react-router';
+import {RouteComponentProps,withRouter } from 'react-router';
 import '../css/productDetail.css';
 import memberprice from '../img/memberprice.jpg'
 import fav from '../img/fav.jpg'
@@ -167,4 +167,4 @@ class ProductDetail extends React.Component<Props,{}>{
 }
 
 
-export default ProductDetail;
+export default withRouter(ProductDetail);

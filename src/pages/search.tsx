@@ -52,6 +52,7 @@ class Search extends React.Component<Props,{}>{
 			self.fetchData();
 
 		  }.bind(this));  
+		  console.log(this.props.match);
 		this.searchWord = this.props.match.params.name;
 		console.log('组件search=='+this.searchWord);
 		this.fetchData();
